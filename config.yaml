@@ -1,0 +1,44 @@
+# Configuration for the Word2Vec (Skip-gram with Negative Sampling) from-scratch project.
+#
+# Implements Mikolov et al., "Efficient Estimation of Word Representations
+# in Vector Space" (2013) and "Distributed Representations of Words and
+# Phrases and their Compositionality" (2013), which introduced the
+# skip-gram architecture, negative sampling, and frequent-word subsampling.
+
+corpus_path: data/corpus.txt
+categories_path: data/word_categories.json
+embeddings_path: models/embeddings.joblib
+figures_dir: output/figures
+report_path: output/evaluation_report.md
+
+# Vocabulary
+min_count: 1              # drop words rarer than this (corpus is tiny, so keep everything)
+
+# Skip-gram training
+embedding_dim: 30
+max_window_size: 4        # dynamic window: sampled uniformly from [1, max_window_size] per pair, as in the original word2vec implementation
+negative_samples: 5        # k negative samples per positive pair
+subsample_threshold: 0.001 # Mikolov et al.'s frequent-word subsampling threshold ("t")
+
+# Optimization
+epochs: 40
+batch_size: 64
+initial_lr: 0.05
+min_lr: 0.0001            # learning rate decays linearly from initial_lr to min_lr over training
+
+random_state: 42
+
+# Evaluation
+query_words:
+  - king
+  - queen
+  - lion
+  - dog
+n_neighbors: 5
+
+# Analogy test: a - b + c should be closest to `expected`
+analogy:
+  a: king
+  b: man
+  c: woman
+  expected: queen
