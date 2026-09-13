@@ -17,6 +17,7 @@ the classic word2vec "king - man + woman = queen" result possible.
 
 Usage:
     python data/generate_corpus.py [--n-sentences 4000] [--seed 42]
+    
 """
 
 import argparse
