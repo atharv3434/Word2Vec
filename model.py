@@ -24,6 +24,7 @@ Because the same word can appear more than once as a center/context/
 negative word within one batch, updates are accumulated with `np.add.at`
 rather than plain fancy-index assignment, which would silently drop all
 but the last update to a repeated index.
+
 """
 
 import numpy as np
