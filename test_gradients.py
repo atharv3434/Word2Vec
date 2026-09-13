@@ -1,4 +1,5 @@
-"""Numerical gradient check for the hand-derived SGNS gradients in model.py.
+"""
+Numerical gradient check for the hand-derived SGNS gradients in model.py.
 
 Since the training update in SkipGramNegativeSampling.train_batch() is
 implemented by hand (no autograd), this test verifies it against a
@@ -8,6 +9,7 @@ training.
 
 Usage:
     python tests/test_gradients.py
+
 """
 
 import os
