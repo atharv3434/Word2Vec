@@ -1,6 +1,8 @@
-"""Corpus preprocessing: tokenization, vocabulary building, frequent-word
+"""
+Corpus preprocessing: tokenization, vocabulary building, frequent-word
 subsampling, the negative-sampling noise distribution, and skip-gram
 training pair generation — following Mikolov et al. (2013).
+
 """
 
 import numpy as np
