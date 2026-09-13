@@ -1,4 +1,5 @@
-"""Train Word2Vec (Skip-gram with Negative Sampling) on the corpus.
+"""
+Train Word2Vec (Skip-gram with Negative Sampling) on the corpus.
 
 Usage:
     python src/train.py [--config config.yaml]
