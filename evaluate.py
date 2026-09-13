@@ -1,10 +1,12 @@
-"""Evaluate the trained embeddings: nearest-neighbor examples, a
+"""
+Evaluate the trained embeddings: nearest-neighbor examples, a
 same-category vs. different-category separation metric, a 2D PCA
 visualization, and the classic word2vec analogy test
 (king - man + woman ~= queen).
 
 Usage:
     python src/evaluate.py [--config config.yaml]
+    
 """
 
 import argparse
